@@ -11,7 +11,7 @@ namespace AppStackLayout
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new StackLayoutExercise1();
         }
 
         protected override void OnStart()

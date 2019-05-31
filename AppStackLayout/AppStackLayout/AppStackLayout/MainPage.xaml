@@ -5,10 +5,46 @@
              x:Class="AppStackLayout.MainPage">
 
     <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+        
+        <!--Stack com orientação vertical(Padrão)-->
+        <StackLayout
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand"
+            Orientation="Vertical"
+            Margin="5, 10, 15, 20"
+            Padding="30"
+            BackgroundColor="Red">
+
+            <BoxView 
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                BackgroundColor="Green"/>
+
+            <BoxView 
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                BackgroundColor="Blue"/>
+
+        </StackLayout>
+
+        <!--Stack com orientação Horizontal-->
+        <StackLayout
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand"
+            Orientation="Horizontal">
+
+            <BoxView 
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                BackgroundColor="Green"/>
+
+            <BoxView 
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                BackgroundColor="Blue"/>
+            
+        </StackLayout>
+        
     </StackLayout>
 
 </ContentPage>
