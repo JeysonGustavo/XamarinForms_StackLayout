@@ -11,7 +11,7 @@ namespace AppStackLayout
         {
             InitializeComponent();
 
-            MainPage = new StackLayoutExercise1();
+            MainPage = new Grid.GridAula02();
         }
 
         protected override void OnStart()
