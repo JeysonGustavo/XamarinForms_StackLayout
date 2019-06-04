@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppStackLayout.Relative.RelativeAula01">
+    <ContentPage.Content>
+        <RelativeLayout>
+
+            <!--
+            Type = define se o elemento será relacionado a outros elementos ou ao elemento pai(RelativeToParent) e qual é a forma. Não precisa do ElementName
+            Property = define o tipo da propriedade do elemento relacionado.
+            Factor = De 0 a 1, que representa a % desejada do elemento.
+            Constant = Adiciona ou subtrair um valor referente a propriedade Factor
+            -->
+            <BoxView 
+                BackgroundColor="Blue"
+                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.5, Constant=-50 }"/>
+           
+            <BoxView 
+                BackgroundColor="Red" 
+                x:Name="Vermelho"
+                Margin="200"
+                WidthRequest="100"
+                HeightRequest="100" />
+
+            <BoxView 
+                BackgroundColor="Green"
+                RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, ElementName=Vermelho, Property=X, Factor=1, Constant=20 }"
+                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=Vermelho, Property=Y, Factor=1, Constant=20 }"
+                WidthRequest="100"
+                HeightRequest="100" />
+
+
+        </RelativeLayout>
+    </ContentPage.Content>
+</ContentPage>
